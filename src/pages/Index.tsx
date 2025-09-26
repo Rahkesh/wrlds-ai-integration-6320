@@ -1,10 +1,10 @@
 
 import PageLayout from '@/components/PageLayout';
-import Hero from '@/components/Hero';
-import Features from '@/components/Features';
-import Projects from '@/components/Projects';
-import WhyWrlds from '@/components/WhyWrlds';
-import BlogPreview from '@/components/BlogPreview';
+import PortfolioHero from '@/components/portfolio/PortfolioHero';
+import Experience from '@/components/portfolio/Experience';
+import Skills from '@/components/portfolio/Skills';
+import Certifications from '@/components/portfolio/Certifications';
+import ProjectsPortfolio from '@/components/portfolio/ProjectsPortfolio';
 import SEO from '@/components/SEO';
 import { useEffect } from 'react';
 
@@ -21,16 +21,16 @@ const Index = () => {
   return (
     <PageLayout>
       <SEO 
-        title="WRLDS - Smart Textile Technology" 
-        description="WRLDS Technologies: Pioneering smart engineering solutions with textile sensors for sports, safety, and performance monitoring."
+        title="Srivarsan T - QA/QC Inspector & Mechatronics Engineer" 
+        description="Professional portfolio of Srivarsan T - QA/QC Inspector, Welding Inspector, and Mechatronics Engineer specializing in process optimization and automation."
         imageUrl="/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png"
-        keywords={['smart textiles', 'wearable technology', 'textile sensors', 'sports tech', 'safety monitoring', 'performance analytics', 'manufacturing']}
+        keywords={['QA QC Inspector', 'Welding Inspector', 'Mechatronics Engineer', 'Process Optimization', 'Six Sigma', 'CSWIP', 'NDT', 'Automation']}
       />
-      <Hero />
-      <Features />
-      <WhyWrlds />
-      <Projects />
-      <BlogPreview />
+      <PortfolioHero />
+      <Experience />
+      <Skills />
+      <Certifications />
+      <ProjectsPortfolio />
     </PageLayout>
   );
 };
