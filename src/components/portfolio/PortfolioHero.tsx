@@ -48,28 +48,39 @@ const PortfolioHero = () => {
       animate="visible" 
       variants={containerVariants}
     >
-      <div className="banner-container bg-black relative overflow-hidden h-[50vh] sm:h-[60vh] md:h-[500px] lg:h-[550px] xl:h-[600px] w-full">
-        <div className="absolute inset-0 bg-black w-full">
-          {/* Professional background gradient */}
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-white"></div>
+      <div className="banner-container bg-primary relative overflow-hidden h-[50vh] sm:h-[60vh] md:h-[500px] lg:h-[550px] xl:h-[600px] w-full">
+        {/* Background Video */}
+        <video 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/lovable-uploads/video_1751292840840_1751292842546.mp4" type="video/mp4" />
+        </video>
+        
+        <div className="absolute inset-0 bg-primary/80 w-full">
+          {/* Yellow overlay for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/60 via-primary/70 to-primary/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/60 to-background"></div>
         </div>
         
         <div className="banner-overlay bg-transparent pt-20 sm:pt-24 md:pt-32 w-full">
           <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center h-full">
             <motion.div className="w-full max-w-4xl text-center" variants={itemVariants}>
-              <motion.h1 className="banner-title text-white" variants={itemVariants}>
+              <motion.h1 className="banner-title text-primary-foreground" variants={itemVariants}>
                 Srivarsan T
               </motion.h1>
-              <motion.h2 className="text-lg sm:text-xl md:text-2xl text-gray-300 mt-2 font-medium" variants={itemVariants}>
+              <motion.h2 className="text-lg sm:text-xl md:text-2xl text-primary-foreground mt-2 font-medium" variants={itemVariants}>
                 QA/QC Inspector | Welding Inspector | Process Optimization | Mechatronics Engineer
               </motion.h2>
-              <motion.p className="banner-subtitle text-gray-400 mt-4 sm:mt-6" variants={itemVariants}>
+              <motion.p className="banner-subtitle text-primary-foreground/90 mt-4 sm:mt-6" variants={itemVariants}>
                 Driving efficiency and quality in automation and manufacturing.
               </motion.p>
               <motion.div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 justify-center items-center" variants={itemVariants}>
                 <button 
-                  className="w-full sm:w-auto min-h-[44px] px-6 sm:px-8 py-3 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 transition-all shadow-lg hover:shadow-xl hover:shadow-gray-300/20 flex items-center justify-center group text-sm sm:text-base font-medium"
+                  className="w-full sm:w-auto min-h-[44px] px-6 sm:px-8 py-3 bg-background text-foreground rounded-md hover:bg-secondary transition-all shadow-lg hover:shadow-xl hover:shadow-primary/20 flex items-center justify-center group text-sm sm:text-base font-medium"
                   onClick={downloadResume}
                 >
                   Download Resume
@@ -77,7 +88,7 @@ const PortfolioHero = () => {
                 </button>
                 
                 <button 
-                  className="w-full sm:w-auto min-h-[44px] px-6 sm:px-8 py-3 bg-gray-700 text-white rounded-md hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl hover:shadow-gray-300/20 flex items-center justify-center group text-sm sm:text-base font-medium"
+                  className="w-full sm:w-auto min-h-[44px] px-6 sm:px-8 py-3 bg-secondary text-secondary-foreground rounded-md hover:bg-accent transition-all shadow-lg hover:shadow-xl hover:shadow-primary/20 flex items-center justify-center group text-sm sm:text-base font-medium"
                   onClick={scrollToContact}
                 >
                   Contact Me
